@@ -1,0 +1,228 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+header {
+    text-align: center;
+    padding: 20px 0;
+}
+
+section {
+    padding: 10px 0;
+}
+
+footer {
+    text-align: center;
+    font-size: 14px;
+}
+
+footer p {
+    margin:  0 0 10px;
+}
+
+a {
+    color: #004cff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0 0 10px;
+}
+
+/* article {} */
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    max-width: 500px;
+    min-width: 300px;
+    width: 100%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    font-family: Arial, sans-serif;
+    border: 1px solid #cdcdcd;
+}
+
+.form-add-task {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+}
+
+.input-task {
+    flex-grow: 5;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.2s ease;
+}
+
+.input-task:focus {
+    outline: none;
+    border-color: #555;
+}
+
+.summary {
+    width: 100%;
+}
+
+.summary article {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.summary article p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 0 100px;
+    gap: 10px;
+    padding: 5px 10px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.5;
+    transition: box-shadow 0.3s ease, translate 0.1s ease;
+}
+
+.summary article p:hover {
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.summary article p:active {
+    translate: 1px 1px;
+    box-shadow: none;
+}
+
+.summary article p span {
+    font-weight: 700;
+}
+
+.btn {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #555;
+}
+
+.btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(51, 51, 51, 0.5);
+}
+
+.btn.btn-add-task {
+    background-color: #004cff;
+    flex: 1 0 100px;
+}
+
+.btn.btn-add-task:hover {
+    background-color: #27339c;
+}
+
+.btn.btn-add-task:focus {
+    box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.5);
+}
+
+.btn.btn-delete-task {
+    background-color: #dc3545;
+}
+
+.btn.btn-delete-task:hover {
+    background-color: #c82333;
+}
+
+.btn.btn-delete-task:focus {
+    box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.5);
+}
+
+.tasks-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 0;
+}
+
+.tasks-list article {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+    padding: 10px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.5;
+    transition: box-shadow 0.3s ease;
+}
+
+.tasks-list article:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.tasks-list article label {
+    width: 100%;
+    flex-grow: 1;
+    cursor: pointer;
+}
+
+.check-box-task {
+    appearance: none;
+    width: 25px;
+    height: 20px;
+    background-color: #fff;
+    border: 2px solid #333;
+    border-radius: 4px;
+    vertical-align: middle;
+    cursor: pointer;
+    transition: border-color 0.2s ease;
+}
+
+.check-box-task:checked {
+    background-color: #28a745;
+    border-color: #24943e;
+}
+
+.check-box-task:hover {
+    border-color: #24943e;
+}

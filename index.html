@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List App</title>
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <header>
+            <h1>To-Do List App</h1>
+            <div>
+                <p>
+                    Escriba una tarea en el siguiente cuadro de texto y luego presione
+                    el botón "Añadir" o presione la tecla "Enter".
+                </p>
+            </div>
+        </header>
+        <section>
+            <h2>Añadir tareas</h2>
+            <div class="form-add-task">
+                <input type="text" name="inputTask" id="inputTask" class="input-task"
+                    placeholder="Escriba una tarea aquí...">
+                <button type="button" id="btnAddTask" class="btn btn-add-task"><i class="fa-solid fa-circle-plus"></i> Añadir</button>
+            </div>
+        </section>
+        <section>
+            <h3>Resumen de Tareas</h3>
+            <div class="summary" id="summary">
+                <!-- Render task summary -->
+            </div>
+        </section>
+        <section>
+            <h2>Lista de tareas</h2>
+            <div class="tasks-list" id="divTasks">
+                <!-- Render tasks list here -->
+            </div>
+        </section>
+    </div>
+
+    <footer class="wrapper">
+        <p>Esta aplicación utiliza el <strong>Almacenamiento Local</strong> del navegador para persistir las tareas que se agregan.
+            Si usted desea eliminar las tareas para obtener las tareas de ejemplo, debe eliminar el almacenamiento local de su navegador.
+            <a href="https://support.google.com/chrome/answer/2392709?hl=en&co=GENIE.Platform%3DDesktop" target="_blank">Aquí puede ver cómo se hace</a> en Google Chrome.
+        </p>
+        <p>Felipe JQ - <a href="#">Repository</a></p>
+    </footer>
+
+    <script src="./assets/js/main.js"></script>
+
+</body>
+
+</html>
