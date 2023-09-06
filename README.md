@@ -4,6 +4,8 @@ Este desafío consta de realizar una pequeña aplicación de listas de tareas. U
 
 Además de poner a prueba la manipulación del DOM y la creación de elementos HTML para renderizar las "Actualizaciones de Estado".
 
+👉 [Live Demo](https://felipejoq.github.io/to-do-list-app-challenge/) 📝
+
 ## 📚 Stack utilizado
 
 - JavaScript Vanilla
