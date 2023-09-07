@@ -58,7 +58,7 @@ const getTaskTemplate = (task) => {
                 <strong>[${task.index}]</strong>
                 <input onclick="completeTask(${task.id})" ${task.completed ? 'checked' : ''}
                     type="checkbox" id="${task.id}" class="check-box-task" name="checkboxTask" />
-                <label for="${task.id}" >${task.text}</label>
+                <label for="${task.id}" class="${task.completed ? 'check-task' : ''}" >${task.text}</label>
                 <button
                     onclick="deleteTask(${task.id})"
                     type="button"

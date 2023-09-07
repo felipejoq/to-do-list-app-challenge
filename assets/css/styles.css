@@ -226,3 +226,10 @@ h3 {
 .check-box-task:hover {
     border-color: #24943e;
 }
+
+.check-task {
+    text-decoration:line-through;
+    text-decoration-thickness: 2px;
+    color: #9b9b9b;
+    letter-spacing: 2px;
+}
