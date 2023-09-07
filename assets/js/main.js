@@ -13,15 +13,16 @@ const saveTasks = (tasks) => {
 }
 
 const addTask = (htlmElement) => {
-    const text = htlmElement.value;
+
+    const text = escapeHtml(htlmElement.value);
 
     if (!text.trim()) {
         htlmElement.focus();
         return;
     };
-    
+
     const newTask = { id: Date.now(), text, completed: false };
-    
+
     const tasks = getTasks();
 
     tasks.push(newTask);
@@ -58,7 +59,7 @@ const getTaskTemplate = (task) => {
                 <strong>[${task.index}]</strong>
                 <input onclick="completeTask(${task.id})" ${task.completed ? 'checked' : ''}
                     type="checkbox" id="${task.id}" class="check-box-task" name="checkboxTask" />
-                <label for="${task.id}" class="${task.completed ? 'check-task' : ''}" >${task.text}</label>
+                <label for="${task.id}" ${task.completed ? 'class="check-task"' : ''} >${task.text}</label>
                 <button
                     onclick="deleteTask(${task.id})"
                     type="button"
@@ -110,6 +111,12 @@ const saveDataExample = () => {
         ];
         saveTasks(TASKS);
     }
+}
+
+const escapeHtml = (htmlStr) => {
+    const tempElement = document.createElement('div');
+    tempElement.innerHTML = htmlStr;
+    return tempElement.textContent || tempElement.innerText || '';
 }
 
 btnAddTask.addEventListener('click', () => {
